@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func move(_ sender: Any) {
+         self.timer.invalidate()
+        
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
@@ -71,14 +73,20 @@ class ViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             nextButton2.isEnabled = false
             backButton2.isEnabled = false
+            
+            
         }else if self.timer != nil{
             self.timer.invalidate()
             self.timer = nil
             nextButton2.isEnabled = true
             backButton2.isEnabled = true
-            
-            
         }
+        
+        
+        
+        
+
+            
         
         
     }
@@ -100,6 +108,8 @@ class ViewController: UIViewController {
         }else if Image.image == imgC{
             viewController2.x = 3
         }
+        
+        
     }
     
     

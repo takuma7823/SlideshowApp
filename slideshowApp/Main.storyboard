@@ -33,15 +33,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-dj-QzG">
-                                <rect key="frame" x="154.5" y="616" width="66" height="30"/>
-                                <state key="normal" title="再生/停止"/>
+                                <rect key="frame" x="172" y="616" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mi-sc-w9z"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r7e-S1-1HJ">
-                                <rect key="frame" x="48" y="294" width="280" height="90"/>
+                                <rect key="frame" x="48" y="183.5" width="279" height="300"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="dhf-W3-8Rm"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VU6-rJ-alr" appends="YES" id="pP5-DW-4h0"/>
                                 </connections>
@@ -49,12 +52,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O8O-yr-rZp" firstAttribute="top" secondItem="r7e-S1-1HJ" secondAttribute="bottom" constant="232" id="7e6-fy-xTX"/>
+                            <constraint firstItem="r7e-S1-1HJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Lz-Ie-Ud6"/>
+                            <constraint firstItem="r7e-S1-1HJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2yv-xt-zXA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aqE-k2-WSA" secondAttribute="trailing" constant="20" id="CSP-TK-K6D"/>
-                            <constraint firstItem="r7e-S1-1HJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="274" id="HZQ-NF-B4n"/>
+                            <constraint firstItem="r7e-S1-1HJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="ELN-Gm-G8c"/>
                             <constraint firstItem="O8O-yr-rZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="L4m-gc-IVC"/>
-                            <constraint firstItem="r7e-S1-1HJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Q1m-9Z-rjU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7e-S1-1HJ" secondAttribute="trailing" constant="47" id="RzW-MY-6gh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7e-S1-1HJ" secondAttribute="trailing" constant="48" id="TCu-LJ-jMM"/>
                             <constraint firstItem="ZWb-dj-QzG" firstAttribute="bottom" secondItem="O8O-yr-rZp" secondAttribute="bottom" id="pRR-qa-MJP"/>
                             <constraint firstItem="aqE-k2-WSA" firstAttribute="bottom" secondItem="O8O-yr-rZp" secondAttribute="bottom" id="pSj-3W-LE6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZWb-dj-QzG" secondAttribute="bottom" constant="21" id="wvP-ac-Nfx"/>
@@ -87,24 +90,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdq-hB-r5X">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSb-pP-J6s">
-                                <rect key="frame" x="153" y="603" width="31" height="30"/>
+                                <rect key="frame" x="172" y="637" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="K3p-WJ-YBG" kind="unwind" unwindAction="unwind:" id="pgh-Mb-zFo"/>
+                                    <segue destination="K3p-WJ-YBG" kind="unwind" unwindAction="unwind:" id="p5e-GJ-E5H"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7gk-Uq-Mo4" firstAttribute="trailing" secondItem="oSb-pP-J6s" secondAttribute="trailing" constant="191" id="9fz-Bi-aMo"/>
-                            <constraint firstItem="7gk-Uq-Mo4" firstAttribute="bottom" secondItem="oSb-pP-J6s" secondAttribute="bottom" constant="34" id="Cdm-Bh-H5F"/>
+                            <constraint firstItem="oSb-pP-J6s" firstAttribute="top" secondItem="Bdq-hB-r5X" secondAttribute="bottom" id="0Iu-1P-nOR"/>
+                            <constraint firstItem="7gk-Uq-Mo4" firstAttribute="bottom" secondItem="oSb-pP-J6s" secondAttribute="bottom" id="2Kr-hU-y6X"/>
+                            <constraint firstItem="oSb-pP-J6s" firstAttribute="centerX" secondItem="Rdh-Sr-haq" secondAttribute="centerX" id="KVl-LA-kSy"/>
                             <constraint firstItem="Bdq-hB-r5X" firstAttribute="leading" secondItem="7gk-Uq-Mo4" secondAttribute="leading" id="LSZ-09-m9s"/>
-                            <constraint firstItem="oSb-pP-J6s" firstAttribute="top" secondItem="Bdq-hB-r5X" secondAttribute="bottom" constant="8" id="PDS-o0-itf"/>
+                            <constraint firstItem="Bdq-hB-r5X" firstAttribute="top" secondItem="Rdh-Sr-haq" secondAttribute="top" id="jcZ-br-r30"/>
                             <constraint firstItem="Bdq-hB-r5X" firstAttribute="trailing" secondItem="7gk-Uq-Mo4" secondAttribute="trailing" id="nJV-7E-wJl"/>
                             <constraint firstItem="Bdq-hB-r5X" firstAttribute="top" secondItem="Rdh-Sr-haq" secondAttribute="top" id="nvm-sa-vVh"/>
+                            <constraint firstItem="Bdq-hB-r5X" firstAttribute="trailing" secondItem="7gk-Uq-Mo4" secondAttribute="trailing" id="tz2-9x-qJh"/>
+                            <constraint firstItem="Bdq-hB-r5X" firstAttribute="leading" secondItem="7gk-Uq-Mo4" secondAttribute="leading" id="vJa-BP-b1a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7gk-Uq-Mo4"/>
                     </view>
@@ -115,7 +121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlV-hl-chK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="K3p-WJ-YBG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="866.66666666666674" y="20.758928571428569"/>
+            <point key="canvasLocation" x="866.39999999999998" y="20.239880059970016"/>
         </scene>
     </scenes>
 </document>
