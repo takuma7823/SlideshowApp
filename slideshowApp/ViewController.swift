@@ -68,13 +68,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var backButton2: UIButton!
     
+    @IBOutlet weak var playButton2: UIButton!
     @IBAction func playButton(_ sender: Any) {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             nextButton2.isEnabled = false
             backButton2.isEnabled = false
-            
-            
+            playButton2.setTitle("停止", for: .normal)
         }else if self.timer != nil{
             self.timer.invalidate()
             self.timer = nil
