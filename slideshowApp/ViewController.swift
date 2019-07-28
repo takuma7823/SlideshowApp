@@ -34,11 +34,18 @@ class ViewController: UIViewController {
     
     
     @IBAction func move(_ sender: Any) {
-         self.timer.invalidate()
+         
         
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        if y == 1{
+            Image.image = imgA
+        }else if y == 2{
+            Image.image = imgB
+        }else if y == 3{
+            Image.image = imgC
+        }
     }
     
     
@@ -75,18 +82,16 @@ class ViewController: UIViewController {
             nextButton2.isEnabled = false
             backButton2.isEnabled = false
             playButton2.setTitle("停止", for: .normal)
+           
         }else if self.timer != nil{
             self.timer.invalidate()
             self.timer = nil
             nextButton2.isEnabled = true
             backButton2.isEnabled = true
+            playButton2.setTitle("再生", for: .normal)
+            
         }
         
-        
-        
-        
-
-            
         
         
     }
@@ -99,6 +104,9 @@ class ViewController: UIViewController {
         self.view.addSubview(Image)
     }
     
+    @IBAction func tap(_ sender: Any) {
+    
+    }
     override func prepare(for segue:UIStoryboardSegue, sender: Any? ){
         let viewController2:ViewController2 = segue.destination as! ViewController2
         if Image.image == imgA{
@@ -111,6 +119,7 @@ class ViewController: UIViewController {
         
         
     }
+    var y = 0
     
     
 }

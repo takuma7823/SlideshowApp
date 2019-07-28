@@ -30,7 +30,16 @@ class ViewController2: UIViewController {
             bigImage.image = imgC
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let viewController:ViewController = segue.destination as! ViewController
+        if bigImage.image == imgA{
+            viewController.y = 1
+        }else if bigImage.image == imgB{
+            viewController.y = 2
+        }else if bigImage.image == imgC{
+            viewController.y = 3
+        }    }
     
     /*
      // MARK: - Navigation
