@@ -39,13 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        if y == 1{
-            Image.image = imgA
-        }else if y == 2{
-            Image.image = imgB
-        }else if y == 3{
-            Image.image = imgC
-        }
+       
     }
     
     
@@ -116,10 +110,16 @@ class ViewController: UIViewController {
         }else if Image.image == imgC{
             viewController2.x = 3
         }
-        
+        if self.timer != nil {
+            
+        self.timer.invalidate()
+        nextButton2.isEnabled = true
+        backButton2.isEnabled = true
+        playButton2.setTitle("再生", for: .normal)
         
     }
-    var y = 0
+    }
+    
     
     
 }
