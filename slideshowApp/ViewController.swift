@@ -113,11 +113,13 @@ class ViewController: UIViewController {
         if self.timer != nil {
             
         self.timer.invalidate()
+            timer = nil
         nextButton2.isEnabled = true
         backButton2.isEnabled = true
         playButton2.setTitle("再生", for: .normal)
         
     }
+        
     }
     
     
